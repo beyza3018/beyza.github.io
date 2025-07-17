@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Mehmet'e Doğum Günü Sürprizi</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Comic Sans MS', cursive;
+      background: url('hello_kitty.png') repeat;
+      background-size: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    #envelope {
+      width: 250px;
+      height: 200px;
+      background: #fff;
+      border: 2px solid #ff69b4;
+      border-radius: 10px;
+      position: relative;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    #letter {
+      display: none;
+      position: absolute;
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      width: 90vw;
+      max-width: 600px;
+      max-height: 80vh;
+      overflow-y: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    #letter h2 {
+      color: #d94f4f;
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="envelope" onclick="openLetter()">
+    💌 Tıkla ve Zarftan Mesajı Oku 💌
+  </div>
+
+  <div id="letter">
+    <h2>Mehmet'e</h2>
+    <p>Her şeyden önce iyi ki varsın. Hayatımda senin gibi iyi kalpli, düşünceli, dehşet kafamın uyuştuğu birisinin olması beni mutlu ediyor. Belki seni senin istediğin gibi sevmiyorum ama seni gerçekten seviyorum, benim için önemlisin.</p>
+    <p>Seninleyken geçirdiğim her vakit bana çok keyif veriyor. Sohbet ederken, "asetto" oynarken, gece 12'den sonra yaptığımız konuşmalar bile sarıyor. Hem seni daha iyi tanıma fırsatım oluyor hem de farklı bakış açıları kazanıyorum.</p>
+    <p>İnsanın karşısında "acaba beni yanlış anlar mı?" diye düşünmeden şakalaşıp konuştuğu birisinin olması çok değerli bir şey.</p>
+    <p>Dilerdim ki yanında olup doğum gününü kutlayabileyim ama nasipte yokmuş. Olsun, en azından doğum gününü kutlayabiliyorum.</p>
+    <p>Bana "benim gözümle kendine baksan sen de çok seversin" demiştin. Bende senden benim gözümle kendine bakmanı istiyorum, değerli olduğunu ve sevildiğini gör diye.</p>
+    <p>Uzun lafın kısası... uzuuunnn lafıınn mısasııı... çokk özledimm... durumun esassıı buu. Of, uzun lafın kısası: İyi ki varsın. Doğum günün kutlu olsun, her şey gönlünce olsun! 🪻</p>
+  </div>
+
+  <audio autoplay loop>
+    <source src="https://www.youtube.com/embed/QveT3gGuWQo?autoplay=1" type="audio/mp3">
+  </audio>
+
+  <script>
+    function openLetter() {
+      document.getElementById('envelope').style.display = 'none';
+      document.getElementById('letter').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
