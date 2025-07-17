@@ -67,7 +67,7 @@
     <p>Uzun lafın kısası uzuuunnn lafının kısasııı... çokk özledimmm durumun esassıı buu. Of, uzun lafın kısası: İyi ki varsın. Doğum günün kutlu olsun, her şey gönlünce olsun! 🪻</p>
   </div>
 
-  <audio id="music" autoplay loop controls>
+  <audio id="music" loop>
     <source src="song.mp3" type="audio/mpeg" />
     Tarayıcınız audio elementini desteklemiyor.
   </audio>
@@ -76,8 +76,15 @@
     function openLetter() {
       document.getElementById('envelope').style.display = 'none';
       document.getElementById('letter').style.display = 'block';
+
+      var music = document.getElementById('music');
+      music.play().catch(function(error) {
+        console.log('Müzik çalma hatası:', error);
+      });
     }
   </script>
 </body>
 </html>
+
+
 
